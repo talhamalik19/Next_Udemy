@@ -1,6 +1,10 @@
+import { getFeaturedEvents } from "../dummy-data";
+import EventsList from "../Components/Events/event-list";
+
 function HomePage(){
+    const featuredEvents = getFeaturedEvents()
     return <div>
-        <h1>This is a Home Page</h1>
+        <EventsList items={featuredEvents} />
     </div>
 }
 
