@@ -2,7 +2,6 @@ import EventItem from "./event-items";
 import classes from './event-list.module.css'
 
 function EventsList({ items }) {
-    console.log(items)
   return (
     <ul className={classes.list}>
       {items.map((events) => (

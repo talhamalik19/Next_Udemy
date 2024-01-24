@@ -57,8 +57,6 @@ function FilteredEventsPage() {
     );
   }
 
-  const date = new Date(numYear, numMonth - 1);
-
   return (
     <Fragment>
       <EventsList items={filteredEvents} />
