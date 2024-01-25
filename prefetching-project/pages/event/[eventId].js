@@ -42,6 +42,7 @@ export async function getStaticProps(context) {
     props: {
       items: eventById
     },
+    revalidate: 30
   };
 }
 
