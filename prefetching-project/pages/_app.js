@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }) {
        <Head>
             <title>Next JS Events</title>
             <meta name="description" content="Next Events Projects for Learning Next JS"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         </Head>
       <Component {...pageProps} />
     </Layout>
