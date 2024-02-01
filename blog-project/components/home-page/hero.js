@@ -8,14 +8,14 @@ function Hero() {
       <div className={classes.image}>
         <Image
           src='/images/site/talha.jpg'
-          alt='An image showing Max'
+          alt='An image showing Talha'
           width={300}
           height={300}
         />
       </div>
-      <h1>Hi, I'm Talha</h1>
+      <h1>Hi, I'm Talha Malik</h1>
       <p>
-        I blog about web development - especially frontend framework like React.
+        I blog about web development - especially React and Next JS.
       </p>
     </section>
   );
