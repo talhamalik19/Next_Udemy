@@ -24,16 +24,17 @@ async function handler(req, res) {
 
     let client;
 
-    const connectionString = 'mongodb+srv://talhamalick19:talha123@cluster0.kuh5jbc.mongodb.net/?retryWrites=true&w=majority';
+    const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.kuh5jbc.mongodb.net/?retryWrites=true&w=majority`;
 
     try {
-      client = await MongoClient.connect(connectionString);
+      client = await MongoClient.connect(connectionString, { useUnifiedTopology: true });
     } catch (error) {
       res.status(500).json({ message: 'Could not connect to database.' });
       return;
     }
+    
 
-    const db = client.db('my-site');
+    const db = client.db(process.env.mongodb_database);
 
     try {
       const result = await db.collection('messages').insertOne(newMessage);
